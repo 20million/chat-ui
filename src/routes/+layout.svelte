@@ -110,8 +110,8 @@
 	<title>{PUBLIC_APP_NAME}</title>
 	<meta name="description" content="One stop shop for love" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@huggingface" />
-	<meta property="og:title" content={"PUBLIC_APP_NAME"} />
+	<meta name="twitter:site" content="@hellonancy" />
+	<meta property="og:title" content={PUBLIC_APP_NAME} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{PUBLIC_ORIGIN || $page.url.origin}{base}" />
 	<meta
@@ -120,7 +120,7 @@
 	/>
 	<link
 		rel="icon"
-		href="{PUBLIC_ORIGIN || $page.url.origin}{base}/{PUBLIC_APP_ASSETS}/favicon.ico"
+		href="{PUBLIC_ORIGIN || $page.url.origin}{base}/{PUBLIC_APP_ASSETS}/favicon.svg"
 		sizes="32x32"
 	/>
 	<link
