@@ -9,21 +9,27 @@ process.env.PUBLIC_VERSION = process.env.npm_package_version;
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	preprocess: vitePreprocess(),
+    // Consult https://kit.svelte.dev/docs/integrations#preprocessors
+    // for more information about preprocessors
+    preprocess: vitePreprocess(),
 
-	kit: {
-		adapter: adapter(),
+    kit: {
+        adapter: adapter(),
 
-		paths: {
-			base: process.env.APP_BASE || "",
-		},
-		csrf: {
-			// handled in hooks.server.ts, because we can have multiple valid origins
-			checkOrigin: false,
-		},
-	},
+        paths: {
+            base: process.env.APP_BASE || "",
+        },
+        csrf: {
+            // handled in hooks.server.ts, because we can have multiple valid origins
+            checkOrigin: false,
+        },
+        csp: {
+            directives: {
+                // will ensure all requests are served through https
+                ['upgrade-insecure-requests']: true
+            }
+        }
+    },
 };
 
 export default config;
